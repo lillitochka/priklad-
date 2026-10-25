@@ -1,1224 +1,554 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#f8f6f0">
-<title>Для моєї Настусі ♡</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Comfortaa:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --paper: #f8f6f0;
-  --white: #fffefa;
-  --ink: #242321;
-  --muted: #827c74;
-  --line: #d9d4cb;
-  --pink: #ead4d1;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 20px;
-}
-
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: 'Comfortaa', sans-serif;
-  overflow-x: hidden;
-}
-
-button, a {
-  -webkit-tap-highlight-color: transparent;
-}
-
-button {
-  font: inherit;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-::selection {
-  background: #d8c6c0;
-  color: #222;
-}
-
-/* HEADER */
-
-.topline {
-  padding: 13px 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  border-bottom: 1px solid var(--line);
-  font-size: 8px;
-  letter-spacing: 1.3px;
-}
-
-.topline span:nth-child(2) {
-  font-family: 'Caveat', cursive;
-  font-size: 18px;
-  letter-spacing: 0;
-}
-
-/* HERO */
-
-.hero {
-  position: relative;
-  padding: 45px 17px 40px;
-  text-align: center;
-  overflow: hidden;
-}
-
-.eyebrow,
-.number {
-  font-size: 9px;
-  letter-spacing: 2px;
-  color: var(--muted);
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  position: relative;
-  z-index: 2;
-  margin: 20px 0 0;
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  font-size: clamp(40px, 11vw, 64px);
-  line-height: 1;
-  letter-spacing: -1.5px;
-}
-
-.hero h1 em,
-.section h2 em,
-.birthday h2 em {
-  font-weight: 500;
-}
-
-.hero-script {
-  position: relative;
-  z-index: 2;
-  margin: 12px 0 0;
-  font-family: 'Caveat', cursive;
-  font-size: 26px;
-}
-
-.hero-collage {
-  position: relative;
-  width: 100%;
-  max-width: 360px;
-  height: 305px;
-  margin: 23px auto 0;
-}
-
-.hero-photo {
-  position: absolute;
-  padding: 6px 6px 27px;
-  background: var(--white);
-  box-shadow: 0 8px 25px #30282018;
-}
-
-.hero-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  background: #eeeae2;
-}
-
-.hero-photo.one {
-  width: 52%;
-  height: 220px;
-  left: 2%;
-  top: 20px;
-  transform: rotate(-7deg);
-}
-
-.hero-photo.two {
-  width: 47%;
-  height: 200px;
-  right: 1%;
-  top: 60px;
-  transform: rotate(6deg);
-}
-
-.hero-photo.three {
-  width: 36%;
-  height: 125px;
-  left: 32%;
-  bottom: 0;
-  transform: rotate(-2deg);
-}
-
-.photo-label {
-  position: absolute;
-  bottom: 5px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-family: 'Caveat', cursive;
-  font-size: 15px;
-}
-
-.hero-bottom {
-  margin: 22px auto 0;
-  max-width: 300px;
-  font-family: 'Caveat', cursive;
-  font-size: 22px;
-  line-height: 1.3;
-}
-
-.scroll-link {
-  display: inline-block;
-  margin-top: 20px;
-  color: var(--ink);
-  font-size: 9px;
-  letter-spacing: 1.4px;
-  text-decoration: none;
-  border-bottom: 1px solid var(--ink);
-  padding-bottom: 6px;
-}
-
-/* DECORATIVE BOW */
-
-.bow {
-  position: absolute;
-  z-index: 5;
-  width: 58px;
-  height: 45px;
-  pointer-events: none;
-}
-
-.bow::before,
-.bow::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  width: 28px;
-  height: 29px;
-  border: 2px solid #292725;
-  background: var(--paper);
-}
-
-.bow::before {
-  left: 1px;
-  border-radius: 80% 20% 65% 35%;
-  transform: rotate(18deg);
-}
-
-.bow::after {
-  right: 1px;
-  border-radius: 20% 80% 35% 65%;
-  transform: rotate(-18deg);
-}
-
-.bow i {
-  position: absolute;
-  z-index: 2;
-  left: 23px;
-  top: 15px;
-  width: 12px;
-  height: 12px;
-  background: #292725;
-  border-radius: 50%;
-}
-
-.bow b {
-  position: absolute;
-  z-index: 1;
-  top: 25px;
-  left: 23px;
-  width: 14px;
-  height: 27px;
-  border-left: 2px solid #292725;
-  border-right: 2px solid #292725;
-  transform: rotate(8deg);
-}
-
-.hero-bow {
-  top: 10px;
-  right: 0;
-  transform: scale(.8) rotate(15deg);
-}
-
-/* STICKERS */
-
-.sticker-strip {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 13px;
-  flex-wrap: wrap;
-  margin: 25px auto 5px;
-  max-width: 370px;
-}
-
-.sticker {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-  filter: drop-shadow(0 3px 3px #342a2015);
-}
-
-.sticker:nth-child(odd) {
-  transform: rotate(-6deg);
-}
-
-.sticker:nth-child(even) {
-  transform: rotate(7deg);
-}
-
-.float-sticker {
-  position: absolute;
-  z-index: 1;
-  width: 55px;
-  height: 55px;
-  object-fit: contain;
-  pointer-events: none;
-  opacity: .85;
-}
-
-.hero-sticker-one {
-  top: 180px;
-  left: 2%;
-  transform: rotate(-12deg);
-}
-
-.hero-sticker-two {
-  top: 365px;
-  right: 2%;
-  transform: rotate(12deg);
-}
-
-/* SECTIONS */
-
-.section {
-  padding: 58px 17px;
-  border-top: 1px solid var(--line);
-}
-
-.section-head {
-  text-align: center;
-  margin: 0 auto 30px;
-  max-width: 440px;
-}
-
-.section h2 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  font-size: clamp(33px, 9vw, 52px);
-  line-height: 1.08;
-  margin: 14px 0;
-  letter-spacing: -.8px;
-}
-
-.hand {
-  font-family: 'Caveat', cursive;
-  font-size: 24px;
-}
-
-.intro {
-  max-width: 340px;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 12px;
-  line-height: 1.9;
-  color: #625d56;
-}
-
-/* MOBILE PHOTO COLLAGE */
-
-.collage {
-  width: min(100%, 390px);
-  margin: 20px auto 0;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 25px 15px;
-  padding: 8px 5px;
-}
-
-.polaroid {
-  position: relative;
-  min-width: 0;
-  aspect-ratio: 3 / 4;
-  background: var(--white);
-  padding: 6px 6px 30px;
-  box-shadow: 0 5px 18px #27231d12;
-}
-
-.polaroid img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  background: #eeebe4;
-}
-
-.polaroid .caption {
-  position: absolute;
-  left: 2px;
-  right: 2px;
-  bottom: 5px;
-  text-align: center;
-  font-family: 'Caveat', cursive;
-  font-size: 15px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.p1 { transform: rotate(-3deg); }
-.p2 { transform: rotate(3deg); margin-top: 15px; }
-.p3 { transform: rotate(-1deg); }
-.p4 { transform: rotate(-3deg); }
-.p5 { transform: rotate(3deg); margin-top: 10px; }
-.p6 { transform: rotate(-2deg); }
-.p7 { transform: rotate(-3deg); }
-.p8 { transform: rotate(3deg); margin-top: 12px; }
-.p9 { transform: rotate(2deg); }
-.p10 { transform: rotate(-3deg); }
-.p11 { transform: rotate(3deg); margin-top: 10px; }
-.p12 { transform: rotate(-2deg); }
-
-.gallery-note {
-  text-align: center;
-  margin: 30px auto 0;
-  font-family: 'Caveat', cursive;
-  font-size: 23px;
-}
-
-.decor-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 24px auto 0;
-  color: #8d8378;
-}
-
-.decor-divider span {
-  font-size: 17px;
-  letter-spacing: 5px;
-}
-
-/* LETTER */
-
-.letter-section {
-  background: #eeebe4;
-  padding-top: 65px;
-  padding-bottom: 65px;
-}
-
-.letter {
-  position: relative;
-  max-width: 420px;
-  margin: 25px auto 0;
-  background: #fffdf7;
-  border: 1px solid #ded8cc;
-  padding: 28px 21px;
-  box-shadow: 0 15px 40px #332a2010;
-}
-
-.letter::before {
-  content: "♡";
-  display: block;
-  text-align: center;
-  font-size: 27px;
-  margin-bottom: 12px;
-}
-
-.letter-title {
-  text-align: center;
-  font-family: 'Caveat', cursive;
-  font-size: 34px;
-  margin: 0 0 18px;
-}
-
-.letter p {
-  font-size: 12px;
-  line-height: 2;
-  color: #514c45;
-}
-
-.letter-sign {
-  text-align: right;
-  font-family: 'Caveat', cursive;
-  font-size: 25px !important;
-}
-
-.hidden-letter {
-  display: none;
-}
-
-.hidden-letter.show {
-  display: block;
-  animation: fadeUp .8s both;
-}
-
-.read-button,
-.music-button {
-  display: block;
-  width: 100%;
-  max-width: 290px;
-  border: 1px solid var(--ink);
-  background: transparent;
-  color: var(--ink);
-  padding: 14px 15px;
-  margin: 22px auto 0;
-  font-size: 9px;
-  letter-spacing: 1.3px;
-  cursor: pointer;
-  transition: background .3s, color .3s;
-}
-
-.read-button:hover,
-.music-button:hover {
-  background: var(--ink);
-  color: white;
-}
-
-/* BIRTHDAY */
-
-.birthday {
-  position: relative;
-  text-align: center;
-  padding: 65px 17px 60px;
-  overflow: hidden;
-}
-
-.birthday h2 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  font-size: clamp(42px, 12vw, 62px);
-  line-height: 1;
-  margin: 20px 0;
-}
-
-.birthday-date {
-  font-family: 'Caveat', cursive;
-  font-size: 24px;
-  line-height: 1.2;
-}
-
-.birthday-sticker {
-  top: 60px;
-  right: 4%;
-  transform: rotate(12deg);
-}
-
-/* REAL DECORATIVE PHOTOS */
-
-.decor-gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  width: min(100%, 350px);
-  margin: 27px auto 30px;
-  align-items: center;
-}
-
-.decor-photo {
-  position: relative;
-  min-width: 0;
-  background: var(--white);
-  padding: 6px 6px 23px;
-  box-shadow: 0 7px 20px #27231d18;
-}
-
-.decor-photo img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center;
-}
-
-.decor-photo:first-child {
-  grid-column: 1 / -1;
-  width: 76%;
-  justify-self: center;
-  transform: rotate(-3deg);
-}
-
-.decor-photo:nth-child(2) {
-  transform: rotate(3deg);
-}
-
-.decor-photo:nth-child(3) {
-  transform: rotate(-4deg);
-}
-
-.decor-photo figcaption {
-  position: absolute;
-  bottom: 4px;
-  left: 2px;
-  right: 2px;
-  font-family: 'Caveat', cursive;
-  font-size: 15px;
-}
-
-/* LITTLE CAKE */
-
-.cake-art {
-  position: relative;
-  width: 190px;
-  height: 150px;
-  margin: 25px auto;
-}
-
-.cake-top {
-  position: absolute;
-  width: 155px;
-  height: 50px;
-  left: 17px;
-  top: 45px;
-  border-radius: 50%;
-  border: 1px solid #393631;
-  background: #fffdf7;
-  z-index: 2;
-}
-
-.cake-body {
-  position: absolute;
-  left: 17px;
-  top: 66px;
-  width: 155px;
-  height: 52px;
-  background: repeating-linear-gradient(
-    90deg,
-    #f4f0e7 0 13px,
-    #ded8cc 13px 15px
-  );
-  border: 1px solid #393631;
-  border-radius: 0 0 50% 50% / 0 0 20% 20%;
-}
-
-.cake-top::after {
-  content: "♡  ♡  ♡";
-  position: absolute;
-  top: 13px;
-  left: 0;
-  right: 0;
-  font-size: 14px;
-}
-
-.candle {
-  position: absolute;
-  z-index: 3;
-  top: 12px;
-  left: 91px;
-  width: 8px;
-  height: 36px;
-  background: repeating-linear-gradient(
-    0deg,
-    #292725 0 4px,
-    #f8f6f0 4px 8px
-  );
-  border: 1px solid #292725;
-}
-
-.flame {
-  position: absolute;
-  z-index: 4;
-  left: 90px;
-  top: 0;
-  width: 10px;
-  height: 14px;
-  border-radius: 80% 20% 60% 40%;
-  transform: rotate(45deg);
-  background: #292725;
-  animation: flicker .8s ease-in-out infinite alternate;
-}
-
-.end-note {
-  max-width: 310px;
-  margin: 20px auto;
-  font-size: 11px;
-  line-height: 2;
-}
-
-/* FOOTER */
-
-footer {
-  border-top: 1px solid var(--line);
-  padding: 22px 15px;
-  text-align: center;
-  font-size: 9px;
-  letter-spacing: 1.6px;
-}
-
-footer .hand {
-  font-size: 19px;
-  letter-spacing: 0;
-  margin-top: 8px;
-}
-
-/* ANIMATIONS */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity .7s, transform .7s;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes flicker {
-  from { transform: rotate(40deg) scale(.92); }
-  to { transform: rotate(50deg) scale(1.08); }
-}
-
-/* TABLET AND DESKTOP */
-
-@media (min-width: 700px) {
-  .hero {
-    padding-top: 70px;
-  }
-
-  .hero-collage {
-    height: 370px;
-  }
-
-  .hero-photo.one {
-    height: 270px;
-  }
-
-  .hero-photo.two {
-    height: 230px;
-  }
-
-  .hero-photo.three {
-    height: 150px;
-  }
-
-  .section {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .collage {
-    max-width: 620px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 25px 22px;
-  }
-
-  .p1, .p2, .p3, .p4, .p5, .p6,
-  .p7, .p8, .p9, .p10, .p11, .p12 {
-    margin-top: 0;
-  }
-}
-
-/* SMALL PHONES */
-
-@media (max-width: 360px) {
-  .topline {
-    font-size: 7px;
-    letter-spacing: 1px;
-    padding-inline: 10px;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-  }
-
-  .hero-script {
-    font-size: 23px;
-  }
-
-  .collage {
-    gap: 21px 11px;
-    padding-inline: 1px;
-  }
-
-  .polaroid {
-    padding: 5px 5px 27px;
-  }
-
-  .polaroid .caption {
-    font-size: 13px;
-  }
-
-  .sticker {
-    width: 55px;
-    height: 55px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    animation-duration: .01ms !important;
-    transition-duration: .01ms !important;
-  }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>З Днем Народження, Настенька! ✨ 14 Років</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Fredoka:wght@400;600;700&family=Marck+Script&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Comfortaa', cursive, sans-serif;
+            background-color: #FFF0F5;
+            background-image: 
+                radial-gradient(#FFB6C1 1.5px, transparent 1.5px), 
+                radial-gradient(#FFB6C1 1.5px, #FFF0F5 1.5px);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
+            color: #5A2A38;
+            overflow-x: hidden;
+        }
+
+        .font-cursive {
+            font-family: 'Marck Script', cursive;
+        }
+
+        .font-heading {
+            font-family: 'Fredoka', cursive;
+        }
+
+        /* Glassmorphism effects */
+        .pink-glass {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 2px solid rgba(255, 182, 193, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(255, 105, 180, 0.15);
+        }
+
+        .polaroid-card {
+            background: #ffffff;
+            padding: 12px 12px 24px 12px;
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .polaroid-card:hover {
+            transform: scale(1.03) rotate(0deg) !important;
+            z-index: 20;
+            box-shadow: 0 15px 35px rgba(255, 20, 147, 0.3);
+        }
+
+        /* Decorative Tape Sticker */
+        .tape-sticker {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90px;
+            height: 26px;
+            background: rgba(255, 192, 203, 0.7);
+            border: 1px dashed rgba(255, 105, 180, 0.5);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            z-index: 5;
+        }
+
+        /* Sparkle animation */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(6deg); }
+        }
+
+        .floating {
+            animation: floatSlow 4s ease-in-out infinite;
+        }
+
+        .floating-delayed {
+            animation: floatSlow 5s ease-in-out infinite 2s;
+        }
+
+        /* Sparkle glitter overlay */
+        .glitter-star {
+            position: absolute;
+            pointer-events: none;
+            animation: pulseGlow 2s infinite ease-in-out alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { opacity: 0.3; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFF0F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FFB6C1;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FF69B4;
+        }
+
+        /* Candle Flame Animation */
+        .flame {
+            width: 12px;
+            height: 18px;
+            background: linear-gradient(to top, #ff9d00, #ff0000, #ffff00);
+            border-radius: 50% 50% 20% 20%;
+            box-shadow: 0 0 10px #ff9d00, 0 0 20px #ff0000;
+            animation: flicker 0.6s infinite alternate;
+            cursor: pointer;
+        }
+
+        @keyframes flicker {
+            0% { transform: scale(1) rotate(-2deg); opacity: 0.9; }
+            100% { transform: scale(1.15) rotate(2deg); opacity: 1; }
+        }
+
+        .candle-out {
+            display: none !important;
+        }
+
+        .smoke {
+            width: 4px;
+            height: 12px;
+            background: rgba(180, 180, 180, 0.6);
+            border-radius: 50%;
+            animation: smokeRise 1s forwards;
+        }
+
+        @keyframes smokeRise {
+            0% { opacity: 1; transform: translateY(0) scale(1); }
+            100% { opacity: 0; transform: translateY(-20px) scale(2); }
+        }
+    </style>
 </head>
-
-<body>
-
-<header class="topline">
-  <span>K V I S I T E</span>
-  <span>made with love ♡</span>
-  <span>FOR NASTIA</span>
-</header>
-
-<main>
-
-<!-- HERO -->
-
-<section class="hero">
-  <img
-    class="float-sticker hero-sticker-one"
-    src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=180&q=80"
-    alt=""
-    aria-hidden="true"
-  >
-
-  <img
-    class="float-sticker hero-sticker-two"
-    src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=180&q=80"
-    alt=""
-    aria-hidden="true"
-  >
-
-  <p class="eyebrow">A LITTLE PAGE JUST FOR YOU</p>
-
-  <h1>
-    для моєї<br>
-    <em>найкращої</em><br>
-    Настусі
-  </h1>
-
-  <p class="hero-script">
-    my favorite person in the whole world ♡
-  </p>
-
-  <div class="hero-collage">
-    <div class="hero-photo one">
-      <img src="IMG_5904.jpeg" alt="Наш спогад" fetchpriority="high">
-      <span class="photo-label">my favorite girl</span>
-    </div>
-
-    <div class="hero-photo two">
-      <img src="IMG_6759.jpeg" alt="Ми разом">
-      <span class="photo-label">us, always ♡</span>
-    </div>
-
-    <div class="hero-photo three">
-      <img src="IMG_6760.jpeg" alt="Щасливий момент">
-      <span class="photo-label">forever memories</span>
-    </div>
-
-    <div class="bow hero-bow">
-      <i></i>
-      <b></b>
-    </div>
-  </div>
-
-  <p class="hero-bottom">
-    настуся · настінька · найкраща · лп
-  </p>
-
-  <a class="scroll-link" href="#our-world">
-    DISCOVER OUR LITTLE WORLD ↓
-  </a>
-
-  <div class="sticker-strip">
-    <img
-      class="sticker"
-      src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=180&q=80"
-      alt="Подарунок"
-      loading="lazy"
-    >
-
-    <img
-      class="sticker"
-      src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=180&q=80"
-      alt="Квіти"
-      loading="lazy"
-    >
-
-    <img
-      class="sticker"
-      src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=180&q=80"
-      alt="Торт"
-      loading="lazy"
-    >
-  </div>
-</section>
-
-<!-- MEMORIES -->
-
-<section class="section" id="our-world">
-  <div class="section-head reveal">
-    <p class="number">01 — OUR LITTLE WORLD</p>
-
-    <h2>
-      трохи <em>нас.</em><br>
-      і дуже багато любові
-    </h2>
-
-    <p class="intro">
-      Є люди, з якими навіть звичайні моменти стають особливими.
-      Ти — саме така людина для мене.
-    </p>
-  </div>
-
-  <div class="collage reveal">
-
-    <figure class="polaroid p1">
-      <img src="IMG_5905.jpeg" alt="Спогад 1" loading="lazy">
-      <figcaption class="caption">a day to remember ♡</figcaption>
-    </figure>
-
-    <figure class="polaroid p2">
-      <img src="IMG_5906.jpeg" alt="Спогад 2" loading="lazy">
-      <figcaption class="caption">my person</figcaption>
-    </figure>
-
-    <figure class="polaroid p3">
-      <img src="IMG_5907.jpeg" alt="Спогад 3" loading="lazy">
-      <figcaption class="caption">little moments</figcaption>
-    </figure>
-
-    <figure class="polaroid p4">
-      <img src="IMG_5908.jpeg" alt="Спогад 4" loading="lazy">
-      <figcaption class="caption">just us ♡</figcaption>
-    </figure>
-
-    <figure class="polaroid p5">
-      <img src="IMG_6781.jpeg" alt="Спогад 5" loading="lazy">
-      <figcaption class="caption">my bestie</figcaption>
-    </figure>
-
-    <figure class="polaroid p6">
-      <img src="IMG_6782.jpeg" alt="Спогад 6" loading="lazy">
-      <figcaption class="caption">forever &amp; ever</figcaption>
-    </figure>
-
-    <figure class="polaroid p7">
-      <img src="IMG_6783.jpeg" alt="Спогад 7" loading="lazy">
-      <figcaption class="caption">you + me</figcaption>
-    </figure>
-
-    <figure class="polaroid p8">
-      <img src="IMG_6784.jpeg" alt="Спогад 8" loading="lazy">
-      <figcaption class="caption">my happy place</figcaption>
-    </figure>
-
-    <figure class="polaroid p9">
-      <img src="IMG_6785.jpeg" alt="Спогад 9" loading="lazy">
-      <figcaption class="caption">the best memories</figcaption>
-    </figure>
-
-    <figure class="polaroid p10">
-      <img src="IMG_6759.jpeg" alt="Спогад 10" loading="lazy">
-      <figcaption class="caption">love this ♡</figcaption>
-    </figure>
-
-    <figure class="polaroid p11">
-      <img src="IMG_6760.jpeg" alt="Спогад 11" loading="lazy">
-      <figcaption class="caption">our little story</figcaption>
-    </figure>
-
-    <figure class="polaroid p12">
-      <img src="IMG_5904.jpeg" alt="Спогад 12" loading="lazy">
-      <figcaption class="caption">always my bestie</figcaption>
-    </figure>
-
-  </div>
-
-  <p class="gallery-note reveal">
-    і це лише маленька частина нашої історії ♡
-  </p>
-
-  <div class="decor-divider">
-    <span>♡ ✿ ♡</span>
-  </div>
-
-  <div class="sticker-strip reveal">
-    <img
-      class="sticker"
-      src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=180&q=80"
-      alt="Квіти"
-      loading="lazy"
-    >
-
-    <img
-      class="sticker"
-      src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=180&q=80"
-      alt="Подарунок"
-      loading="lazy"
-    >
-
-    <img
-      class="sticker"
-      src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=180&q=80"
-      alt="Торт"
-      loading="lazy"
-    >
-  </div>
-</section>
-
-<!-- LETTER -->
-
-<section class="section letter-section">
-  <div class="section-head reveal">
-    <p class="number">02 — A LETTER FOR YOU</p>
-
-    <h2>
-      відкрий,<br>
-      <em>це для тебе</em>
-    </h2>
-
-    <p class="hand">
-      тут усе, що не завжди скажеш уголос ♡
-    </p>
-  </div>
-
-  <div class="letter reveal">
-    <h3 class="letter-title">моя настуся...</h3>
-
-    <p>
-      Я навіть не знаю, як умістити в один лист усе, що хочу тобі сказати.
-      Але я точно знаю, що дуже сильно тебе люблю і неймовірно ціную нашу дружбу.
-    </p>
-
-    <p>
-      Ти для мене не просто подруга. Ти моя найкраща, моя настінька,
-      моя лп — людина, з якою хочеться ділитися новинами, сміятися до сліз,
-      говорити про все на світі й створювати ще мільйон спогадів.
-    </p>
-
-    <div class="hidden-letter" id="extraLetter">
-      <p>
-        Я хочу, щоб ти завжди пам'ятала, яка ти особлива.
-        Щоб поруч були люди, які тебе розуміють, підтримують і люблять такою,
-        яка ти є. Щоб у тебе здійснювалися навіть ті мрії, про які ти поки
-        нікому не розповідала.
-      </p>
-
-      <p>
-        Дякую тобі за кожну розмову, кожен смішний момент і за те,
-        що ти є в моєму житті. Я дуже хочу, щоб ми й через багато років
-        згадували все це разом і сміялися так само, як зараз.
-      </p>
-
-      <p>
-        Люблю тебе більше, ніж можна пояснити словами.
-        Залишайся моєю найкращою. Завжди. ♡
-      </p>
-
-      <p class="letter-sign">твоя лп, з любов'ю ♡</p>
-    </div>
-
-    <button class="read-button" id="readLetter" type="button">
-      ВІДКРИТИ ЛИСТ ♡
-    </button>
-  </div>
-</section>
-
-<!-- BIRTHDAY -->
-
-<section class="birthday">
-  <img
-    class="float-sticker birthday-sticker"
-    src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=180&q=80"
-    alt=""
-    aria-hidden="true"
-  >
-
-  <p class="number reveal">03 — YOUR SPECIAL DAY</p>
-
-  <h2 class="reveal">
-    happy<br>
-    <em>birthday,</em><br>
-    настусю ♡
-  </h2>
-
-  <p class="birthday-date reveal">
-    a little more magic, a little more love
-  </p>
-
-  <div class="decor-gallery reveal">
-
-    <figure class="decor-photo">
-      <img
-        src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=700&q=85"
-        alt="Святковий торт"
-        loading="lazy"
-      >
-      <figcaption>made of sweetness ♡</figcaption>
-    </figure>
-
-    <figure class="decor-photo">
-      <img
-        src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=500&q=85"
-        alt="Ніжні квіти"
-        loading="lazy"
-      >
-      <figcaption>flowers for you</figcaption>
-    </figure>
-
-    <figure class="decor-photo">
-      <img
-        src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=500&q=85"
-        alt="Квітковий букет"
-        loading="lazy"
-      >
-      <figcaption>little pretty things</figcaption>
-    </figure>
-
-  </div>
-
-  <div class="sticker-strip reveal">
-    <img
-      class="sticker"
-      src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=180&q=80"
-      alt="Подарунок"
-      loading="lazy"
-    >
-
-    <img
-      class="sticker"
-      src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=180&q=80"
-      alt="Торт"
-      loading="lazy"
-    >
-
-    <img
-      class="sticker"
-      src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=180&q=80"
-      alt="Квіти"
-      loading="lazy"
-    >
-  </div>
-
-  <div class="cake-art reveal" aria-label="Маленький святковий тортик">
-    <div class="flame"></div>
-    <div class="candle"></div>
-    <div class="cake-top"></div>
-    <div class="cake-body"></div>
-  </div>
-
-  <p class="end-note reveal">
-    Нехай цей рік принесе тобі стільки щастя, скільки тепла ти даруєш
-    людям навколо. Ти заслуговуєш на найкраще, моя найкраща. 🤍
-  </p>
-
-  <button class="music-button reveal" id="musicButton" type="button">
-    ♫ УВІМКНУТИ HAPPY BIRTHDAY
-  </button>
-
-  <audio id="birthdayMusic" src="happy-birthday.mp3" loop preload="none"></audio>
-
-  <p class="hand reveal">
-    з днем народження, моя любов 🖤
-  </p>
-</section>
-
-</main>
-
-<footer>
-  <div>K V I S I T E · MADE WITH LOVE</div>
-  <div class="hand">для найкращої Настусі ♡</div>
-</footer>
-
-<script>
-/* Поява блоків під час прокручування */
-
-const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.1
-});
-
-document.querySelectorAll('.reveal').forEach(element => {
-  revealObserver.observe(element);
-});
-
-/* Відкриття листа */
-
-const readButton = document.getElementById('readLetter');
-const extraLetter = document.getElementById('extraLetter');
-
-readButton.addEventListener('click', () => {
-  const isOpen = extraLetter.classList.toggle('show');
-
-  readButton.textContent = isOpen
-    ? 'ЗАКРИТИ ЛИСТ ♡'
-    : 'ВІДКРИТИ ЛИСТ ♡';
-
-  if (isOpen) {
-    setTimeout(() => {
-      extraLetter.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest'
-      });
-    }, 100);
-  }
-});
-
-/* Музика */
-
-const music = document.getElementById('birthdayMusic');
-const musicButton = document.getElementById('musicButton');
-
-musicButton.addEventListener('click', async () => {
-  if (music.paused) {
-    try {
-      await music.play();
-      musicButton.textContent = '♫ ВИМКНУТИ МУЗИКУ';
-    } catch (error) {
-      musicButton.textContent = 'ДОДАЙ ФАЙЛ happy-birthday.mp3';
-    }
-  } else {
-    music.pause();
-    musicButton.textContent = '♫ УВІМКНУТИ HAPPY BIRTHDAY';
-  }
-});
-
-/* Не даємо фото друзів розтягуватися */
-
-document.querySelectorAll('.hero-photo img, .polaroid img').forEach(img => {
-  img.addEventListener('error', () => {
-    img.style.background = '#e9e3d9';
-    img.alt = 'Перевір назву фото у файлах GitHub';
-  });
-});
-</script>
-
+<body class="min-h-screen relative pb-12">
+
+    <!-- Decorative Floating Stickers / Background Elements -->
+    <div class="fixed top-10 left-5 text-4xl floating pointer-events-none z-0">🌸</div>
+    <div class="fixed top-1/4 right-8 text-5xl floating-delayed pointer-events-none z-0">✨</div>
+    <div class="fixed bottom-1/3 left-8 text-4xl floating pointer-events-none z-0">🎀</div>
+    <div class="fixed bottom-10 right-10 text-5xl floating-delayed pointer-events-none z-0">💖</div>
+
+    <!-- Header / Hero Banner -->
+    <header class="relative pt-12 pb-8 px-4 text-center max-w-4xl mx-auto">
+        <div class="inline-block px-6 py-2 rounded-full bg-pink-200 text-pink-700 font-bold text-sm md:text-base mb-4 shadow-sm border border-pink-300 transform -rotate-1 hover:rotate-0 transition">
+            🎉 Happy Birthday, Girl! 🎉
+        </div>
+
+        <h1 class="font-heading text-4xl sm:text-6xl md:text-7xl font-extrabold text-pink-600 drop-shadow-md mb-2 leading-tight">
+            З Днем Народження,<br class="sm:hidden"> 
+            <span class="text-pink-500 relative inline-block">
+                Настусю! 
+                <span class="absolute -top-3 -right-6 text-3xl">✨</span>
+            </span>
+        </h1>
+
+        <p class="font-cursive text-2xl md:text-4xl text-pink-700 mt-2 mb-6">
+            Тобі вже 14! Твоє свято настало! 🎂💖
+        </p>
+
+        <!-- Birthday Counter / Tag Badge -->
+        <div class="flex flex-wrap justify-center gap-3 my-4">
+            <span class="pink-glass px-4 py-2 rounded-2xl text-pink-600 font-bold text-sm sm:text-base flex items-center gap-2">
+                <i class="fa-solid fa-heart text-pink-500"></i> Моя ЛПшка
+            </span>
+            <span class="pink-glass px-4 py-2 rounded-2xl text-pink-600 font-bold text-sm sm:text-base flex items-center gap-2">
+                <i class="fa-solid fa-crown text-yellow-500"></i> Королева дня
+            </span>
+            <span class="pink-glass px-4 py-2 rounded-2xl text-pink-600 font-bold text-sm sm:text-base flex items-center gap-2">
+                <i class="fa-solid fa-star text-pink-400"></i> 14 років сяйва
+            </span>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 space-y-16 relative z-10">
+
+        <!-- Top Greeting Card -->
+        <section class="pink-glass rounded-3xl p-6 md:p-10 relative overflow-hidden text-center shadow-xl border-4 border-white">
+            <div class="absolute -right-10 -bottom-10 opacity-20 text-9xl text-pink-400 font-bold select-none pointer-events-none">14</div>
+            <h2 class="font-heading text-2xl md:text-3xl text-pink-600 mb-4 font-bold">
+                Люба моя Настенька! 💕
+            </h2>
+            <p class="text-base md:text-lg leading-relaxed text-gray-700 max-w-3xl mx-auto">
+                Вітаю тебе з твоїм <b>14-річчям</b>! Ти найкраща подружка у світі, моя найрідніша ЛПшка! Бажаю тобі нескінченного щастя, найкрутіших емоцій, здійснення всіх мрій та море посмішок! Нехай кожен день буде таким же яскравим, красивим та солодким, як цей сайт! ✨🎂🌸
+            </p>
+            <div class="mt-6">
+                <button onclick="launchConfetti()" class="bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white font-bold px-8 py-3 rounded-full shadow-lg hover:shadow-pink-300 transform hover:-translate-y-1 transition active:translate-y-0 flex items-center gap-2 mx-auto text-lg">
+                    <span>Подарувати фейєрверк!</span> 🥳✨
+                </button>
+            </div>
+        </section>
+
+        <!-- Photo Gallery / Polaroid Memories Grid -->
+        <section>
+            <div class="text-center mb-10">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-pink-600 flex items-center justify-center gap-3">
+                    <span>📸</span> Наші найкращі моменти <span>✨</span>
+                </h2>
+                <p class="text-pink-500 mt-2 font-cursive text-xl">Настуся, подивись на цю красу!</p>
+            </div>
+
+            <!-- Polaroid Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+                <!-- Photo 1 -->
+                <div class="polaroid-card rounded-2xl transform -rotate-2">
+                    <div class="tape-sticker"></div>
+                    <div class="w-full h-64 overflow-hidden rounded-xl bg-pink-100 flex items-center justify-center relative">
+                        <img src="IMG_5904.jpeg" alt="Настя" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x500/FFB6C1/ffffff?text=IMG_5904.jpeg';">
+                    </div>
+                    <p class="font-cursive text-center text-xl text-pink-600 mt-3 font-bold">Красуня Настя ✨</p>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="polaroid-card rounded-2xl transform rotate-3">
+                    <div class="tape-sticker"></div>
+                    <div class="w-full h-64 overflow-hidden rounded-xl bg-pink-100 flex items-center justify-center relative">
+                        <img src="IMG_5905.jpeg" alt="Настуся" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x500/FFB6C1/ffffff?text=IMG_5905.jpeg';">
+                    </div>
+                    <p class="font-cursive text-center text-xl text-pink-600 mt-3 font-bold">Моя ЛПшка 💕</p>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="polaroid-card rounded-2xl transform -rotate-3">
+                    <div class="tape-sticker"></div>
+                    <div class="w-full h-64 overflow-hidden rounded-xl bg-pink-100 flex items-center justify-center relative">
+                        <img src="IMG_5906.jpeg" alt="Настенька" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x500/FFB6C1/ffffff?text=IMG_5906.jpeg';">
+                    </div>
+                    <p class="font-cursive text-center text-xl text-pink-600 mt-3 font-bold">Найкраща подружка 🌸</p>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="polaroid-card rounded-2xl transform rotate-2">
+                    <div class="tape-sticker"></div>
+                    <div class="w-full h-64 overflow-hidden rounded-xl bg-pink-100 flex items-center justify-center relative">
+                        <img src="IMG_5907.jpeg" alt="Настя 14 років" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x500/FFB6C1/ffffff?text=IMG_5907.jpeg';">
+                    </div>
+                    <p class="font-cursive text-center text-xl text-pink-600 mt-3 font-bold">Сонечко ☀️</p>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="polaroid-card rounded-2xl transform rotate-1">
+                    <div class="tape-sticker"></div>
+                    <div class="w-full h-64 overflow-hidden rounded-xl bg-pink-100 flex items-center justify-center relative">
+                        <img src="IMG_5908.jpeg" alt="Фото Насті" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x500/FFB6C1/ffffff?text=IMG_5908.jpeg';">
+                    </div>
+                    <p class="font-cursive text-center text-xl text-pink-600 mt-3 font-bold">Твоя посмішка 💖</p>
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="polaroid-card rounded-2xl transform -rotate-2">
+                    <div class="tape-sticker"></div>
+                    <div class="w-full h-64 overflow-hidden rounded-xl bg-pink-100 flex items-center justify-center relative">
+                        <img src="IMG_6759.jpeg" alt="Фото Насті" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x500/FFB6C1/ffffff?text=IMG_6759.jpeg';">
+                    </div>
+                    <p class="font-cursive text-center text-xl text-pink-600 mt-3 font-bold">Неймовірна ✨</p>
+                </div>
+
+                <!-- Photo 7 -->
+                <div class="polaroid-card rounded-2xl transform rotate-3">
+                    <div class="tape-sticker"></div>
+                    <div class="w-full h-64 overflow-hidden rounded-xl bg-pink-100 flex items-center justify-center relative">
+                        <img src="IMG_6760.jpeg" alt="Фото Насті" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x500/FFB6C1/ffffff?text=IMG_6760.jpeg';">
+                    </div>
+                    <p class="font-cursive text-center text-xl text-pink-600 mt-3 font-bold">Стильна дівчинка 💅</p>
+                </div>
+
+                <!-- Photo 8 -->
+                <div class="polaroid-card rounded-2xl transform -rotate-1">
+                    <div class="tape-sticker"></div>
+                    <div class="w-full h-64 overflow-hidden rounded-xl bg-pink-100 flex items-center justify-center relative">
+                        <img src="IMG_6781.jpeg" alt="Фото Насті" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x500/FFB6C1/ffffff?text=IMG_6781.jpeg';">
+                    </div>
+                    <p class="font-cursive text-center text-xl text-pink-600 mt-3 font-bold">Тільки вайб 🔥</p>
+                </div>
+
+                <!-- Photo 9 -->
+                <div class="polaroid-card rounded-2xl transform rotate-2">
+                    <div class="tape-sticker"></div>
+                    <div class="w-full h-64 overflow-hidden rounded-xl bg-pink-100 flex items-center justify-center relative">
+                        <img src="IMG_6782.jpeg" alt="Фото Насті" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x500/FFB6C1/ffffff?text=IMG_6782.jpeg';">
+                    </div>
+                    <p class="font-cursive text-center text-xl text-pink-600 mt-3 font-bold">Люблю тебе ❤️</p>
+                </div>
+
+                <!-- Photo 10 -->
+                <div class="polaroid-card rounded-2xl transform -rotate-3">
+                    <div class="tape-sticker"></div>
+                    <div class="w-full h-64 overflow-hidden rounded-xl bg-pink-100 flex items-center justify-center relative">
+                        <img src="IMG_6783.jpeg" alt="Фото Насті" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x500/FFB6C1/ffffff?text=IMG_6783.jpeg';">
+                    </div>
+                    <p class="font-cursive text-center text-xl text-pink-600 mt-3 font-bold">Весела та яскрава 🥳</p>
+                </div>
+
+                <!-- Photo 11 -->
+                <div class="polaroid-card rounded-2xl transform rotate-3">
+                    <div class="tape-sticker"></div>
+                    <div class="w-full h-64 overflow-hidden rounded-xl bg-pink-100 flex items-center justify-center relative">
+                        <img src="IMG_6784.jpeg" alt="Фото Насті" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x500/FFB6C1/ffffff?text=IMG_6784.jpeg';">
+                    </div>
+                    <p class="font-cursive text-center text-xl text-pink-600 mt-3 font-bold">Завжди на висоті 🌟</p>
+                </div>
+
+                <!-- Photo 12 -->
+                <div class="polaroid-card rounded-2xl transform -rotate-2">
+                    <div class="tape-sticker"></div>
+                    <div class="w-full h-64 overflow-hidden rounded-xl bg-pink-100 flex items-center justify-center relative">
+                        <img src="IMG_6785.jpeg" alt="Фото Насті" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x500/FFB6C1/ffffff?text=IMG_6785.jpeg';">
+                    </div>
+                    <p class="font-cursive text-center text-xl text-pink-600 mt-3 font-bold">14 років незабутня! 👑</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Interactive Birthday Cake with 14 Candles Section -->
+        <section class="pink-glass rounded-3xl p-8 md:p-12 text-center shadow-xl border-4 border-white relative">
+            <h2 class="font-heading text-3xl font-bold text-pink-600 mb-2">
+                🎂 Загадай бажання та задуй свічки! 🕯️
+            </h2>
+            <p class="text-pink-500 font-cursive text-xl mb-6">
+                Клацай на свічки, щоб задути їх (їх тут рівно 14!)
+            </p>
+
+            <!-- Cake Container -->
+            <div class="relative w-72 sm:w-80 mx-auto pt-16 pb-6 flex flex-col items-center justify-center">
+                
+                <!-- Candles Container (14 candles) -->
+                <div id="candlesContainer" class="flex justify-center items-end gap-1.5 sm:gap-2 mb-1 z-10">
+                    <!-- Javascript will render 14 candles here -->
+                </div>
+
+                <!-- Cake Graphic Visual -->
+                <div class="w-full bg-pink-300 h-16 rounded-t-3xl border-b-4 border-pink-400 relative shadow-inner flex items-center justify-center">
+                    <div class="absolute top-0 w-full h-4 bg-white rounded-b-xl opacity-80"></div>
+                    <span class="text-white font-bold text-lg font-heading tracking-widest drop-shadow">НАСТЮШІ 14</span>
+                </div>
+                <div class="w-[110%] bg-pink-400 h-20 rounded-t-xl border-b-4 border-pink-500 relative flex items-center justify-center shadow-md">
+                    <div class="absolute top-0 w-full h-4 bg-pink-200 rounded-b-xl opacity-90"></div>
+                    <span class="text-pink-100 text-2xl">💖 ✨ 🌸 💖 ✨</span>
+                </div>
+                <div class="w-[125%] bg-white h-6 rounded-full shadow-lg border border-pink-200"></div>
+            </div>
+
+            <!-- Status Indicator -->
+            <div id="candleStatus" class="mt-6 text-pink-700 font-bold text-lg">
+                Залишилося задути свічок: <span id="candlesLeftCount" class="text-pink-500 text-2xl font-extrabold">14</span> 🕯️
+            </div>
+
+            <button id="resetCandlesBtn" onclick="resetCandles()" class="mt-4 text-xs text-pink-400 hover:text-pink-600 underline">
+                Запалити свічки знову ✨
+            </button>
+        </section>
+
+        <!-- Wishes Cards Grid -->
+        <section class="space-y-6">
+            <div class="text-center">
+                <h2 class="font-heading text-3xl font-bold text-pink-600">
+                    💌 Мої побажання для тебе
+                </h2>
+                <p class="text-pink-500 font-cursive text-xl">Натискай на картки, щоб відкрити секретики!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div onclick="toggleWish(this)" class="pink-glass p-6 rounded-2xl cursor-pointer hover:border-pink-400 transition transform hover:-translate-y-1 shadow-md group">
+                    <div class="text-4xl mb-3 text-center group-hover:scale-110 transition">🎁</div>
+                    <h3 class="font-heading text-xl font-bold text-pink-600 text-center mb-2">Мрії та цілі</h3>
+                    <p class="wish-text text-gray-600 text-center text-sm">
+                        Нехай усі твої найамбітніші мрії обов'язково здійснюються легко та швидко!
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div onclick="toggleWish(this)" class="pink-glass p-6 rounded-2xl cursor-pointer hover:border-pink-400 transition transform hover:-translate-y-1 shadow-md group">
+                    <div class="text-4xl mb-3 text-center group-hover:scale-110 transition">👑</div>
+                    <h3 class="font-heading text-xl font-bold text-pink-600 text-center mb-2">Впевненість & Вайб</h3>
+                    <p class="wish-text text-gray-600 text-center text-sm">
+                        Сяй завжди яскраво! Ти неймовірна, стильна та унікальна дівчинка.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div onclick="toggleWish(this)" class="pink-glass p-6 rounded-2xl cursor-pointer hover:border-pink-400 transition transform hover:-translate-y-1 shadow-md group">
+                    <div class="text-4xl mb-3 text-center group-hover:scale-110 transition">♾️</div>
+                    <h3 class="font-heading text-xl font-bold text-pink-600 text-center mb-2">Наша дружба</h3>
+                    <p class="wish-text text-gray-600 text-center text-sm">
+                        Дякую за кожну хвилину разом! Ми найкращі ЛПшки назавжди! ❤️
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Promos & Author Callout -->
+    <footer class="mt-20 border-t border-pink-200 bg-white/60 backdrop-blur-md pt-10 pb-8 text-center px-4 relative z-10">
+        <div class="max-w-xl mx-auto space-y-4">
+            <p class="font-heading text-pink-600 font-bold text-lg">
+                З любов'ю для Насті! 💕 2026
+            </p>
+            
+            <div class="my-6 p-1 bg-gradient-to-r from-pink-300 via-pink-400 to-pink-300 rounded-3xl shadow-lg">
+                <div class="bg-white rounded-[22px] p-6 text-center">
+                    <p class="font-heading text-xl font-bold text-pink-600 mb-2">
+                        Хочеш такий самий сайт собі? ✨
+                    </p>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Заповнюй анкету на сайті <b>kvisite</b> та отримуй свій ідеальний дизайн!
+                    </p>
+                    <a href="https://kvisite.com" target="_blank" rel="noopener noreferrer" class="inline-block bg-pink-500 hover:bg-pink-600 text-white font-bold px-6 py-2.5 rounded-full shadow-md transition transform hover:scale-105">
+                        Перейти на kvisite 🚀
+                    </a>
+                </div>
+            </div>
+
+            <p class="text-xs text-pink-400">
+                Зроблено з любов'ю &amp; блістяшками ✨
+            </p>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic Script -->
+    <script>
+        let candlesLit = 14;
+
+        // Render Candles on load
+        function renderCandles() {
+            const container = document.getElementById('candlesContainer');
+            container.innerHTML = '';
+            candlesLit = 14;
+            updateCandleCount();
+
+            for (let i = 0; i < 14; i++) {
+                const candle = document.createElement('div');
+                candle.className = 'flex flex-col items-center cursor-pointer group';
+                candle.onclick = function() { blowCandle(this); };
+
+                candle.innerHTML = `
+                    <div class="flame group-hover:scale-125 transition" id="flame-${i}"></div>
+                    <div class="smoke hidden" id="smoke-${i}"></div>
+                    <div class="w-2 sm:w-2.5 h-8 sm:h-10 bg-gradient-to-t from-pink-200 to-white rounded-t-sm border-x border-pink-300"></div>
+                `;
+                container.appendChild(candle);
+            }
+        }
+
+        function blowCandle(element) {
+            const flame = element.querySelector('.flame');
+            const smoke = element.querySelector('.smoke');
+
+            if (flame && !flame.classList.contains('candle-out')) {
+                flame.classList.add('candle-out');
+                if (smoke) smoke.classList.remove('hidden');
+                
+                candlesLit--;
+                updateCandleCount();
+
+                // Mini confetti burst for each candle
+                confetti({
+                    particleCount: 15,
+                    spread: 40,
+                    origin: { y: 0.6 }
+                });
+
+                if (candlesLit === 0) {
+                    setTimeout(() => {
+                        launchBigCelebration();
+                    }, 300);
+                }
+            }
+        }
+
+        function updateCandleCount() {
+            document.getElementById('candlesLeftCount').innerText = candlesLit;
+            const statusText = document.getElementById('candleStatus');
+            if (candlesLit === 0) {
+                statusText.innerHTML = "🎉 Всі 14 свічок задуто! Твоє бажання обов'язково здійсниться! 💖✨";
+            } else {
+                statusText.innerHTML = `Залишилося задути свічок: <span id="candlesLeftCount" class="text-pink-500 text-2xl font-extrabold">${candlesLit}</span> 🕯️`;
+            }
+        }
+
+        function resetCandles() {
+            renderCandles();
+        }
+
+        function launchConfetti() {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#FF69B4', '#FFB6C1', '#FF1493', '#FFD700', '#FFFFFF']
+            });
+        }
+
+        function launchBigCelebration() {
+            const duration = 3 * 1000;
+            const end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: ['#FF69B4', '#FFB6C1', '#FF1493']
+                });
+                confetti({
+                    particleCount: 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: ['#FF69B4', '#FFB6C1', '#FF1493']
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        }
+
+        function toggleWish(card) {
+            confetti({
+                particleCount: 20,
+                spread: 50,
+                origin: { y: 0.7 }
+            });
+        }
+
+        // Initialize on window load
+        window.onload = function() {
+            renderCandles();
+        };
+    </script>
 </body>
 </html>
