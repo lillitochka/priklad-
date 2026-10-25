@@ -3,209 +3,402 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Маленький чорно-білий світ для Насті 🖤">
-  <title>для моєї улюбленої Насті 🖤</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f6f4">
+  <title>for my favorite girl ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="stripe-top"></div>
+  <div class="grain"></div>
+  <div class="floating-hearts" id="hearts"></div>
 
   <header class="topbar">
-    <span>K & N</span>
-    <span class="top-bow">୨୧</span>
-    <span>FOREVER ♡</span>
+    <a class="brand" href="#home">little <span>♡</span> things</a>
+    <button class="music-button" id="musicButton" aria-label="Увімкнути музику">
+      ♫ <span id="musicLabel">our song</span>
+    </button>
   </header>
 
+  <audio id="birthdayMusic" loop preload="none">
+    <source src="happy-birthday.mp3" type="audio/mpeg">
+  </audio>
+
   <main>
-    <section class="hero">
-      <div class="hero-frame">
-        <div class="hero-bow">୨୧</div>
-        <p class="eyebrow">A LITTLE LETTER FOR YOU</p>
-        <p class="tiny-heart">🖤 🤍 🫶🏻</p>
+    <section class="hero" id="home">
+      <div class="hero-side left-side">
+        <span class="tiny-note">a little page</span>
+        <span class="side-heart">♡</span>
+      </div>
 
-        <h1>для моєї<br>улюбленої<br><span>Насті</span></h1>
-
-        <div class="ornament">━━━━ ♡ ━━━━</div>
-        <p class="hero-subtitle">
-          my favorite person in the whole world
+      <div class="hero-content">
+        <div class="hero-bow">🎀</div>
+        <p class="eyebrow">a little something for you</p>
+        <h1>For my<br><i>favorite girl</i></h1>
+        <p class="hero-description">
+          some people make ordinary days<br>
+          feel like something special ♡
         </p>
-
-        <a class="outline-button" href="#letter">
-          прочитай цей лист ♡
-        </a>
-
-        <p class="floating-caption">made with love, just for you</p>
+        <button class="primary-button" id="openButton">
+          open your little surprise <span>↗</span>
+        </button>
+        <div class="scroll-cue"><span></span> scroll slowly</div>
       </div>
 
-      <span class="side-note side-left">BEST FRIENDS</span>
-      <span class="side-note side-right">ALWAYS & FOREVER</span>
-    </section>
-
-    <section class="intro section-pad" id="letter">
-      <p class="eyebrow">TO MY GIRL ♡</p>
-      <h2>ти навіть не уявляєш,<br>як сильно я тебе люблю</h2>
-
-      <div class="divider">୨୧ ━━━━━ ♡ ━━━━━ ୨୧</div>
-
-      <p class="love-letter">
-        настуся, я навіть не знаю, як описати словами,
-        наскільки сильно я тебе люблю і наскільки ти важлива
-        для мене. 🖤 ти не просто моя подруга, ти моя лп,
-        моя людина, з якою хочеться ділитися всім на світі.
-        я дуже ціную кожну нашу розмову, кожен смішний момент,
-        кожен спогад і навіть наші маленькі дурниці, які
-        зрозуміємо тільки ми з тобою.
-        <br><br>
-        я хочу, щоб ти завжди пам’ятала, яка ти особлива.
-        ти заслуговуєш на найщиріше щастя, на людей, які
-        любитимуть тебе такою, яка ти є, на здійснення
-        всіх твоїх мрій і на мільйон приводів усміхатися.
-        навіть коли в тебе поганий день, я хочу, щоб ти
-        знала: ти не сама, і є людина, якій ти дуже дорога.
-        <br><br>
-        дякую тобі за те, що ти є в моєму житті.
-        я дуже хочу, щоб у нас було ще безліч спільних
-        моментів, фотографій, мемів, розмов до ночі
-        і спогадів, які ми колись будемо згадувати
-        з усмішкою. нехай наша дружба стає тільки міцнішою.
-        <br><br>
-        з днем народження, моя найкраща!
-        я люблю тебе більше, ніж можна пояснити словами.
-        ти назавжди матимеш особливе місце в моєму серці. 🫶🏻
-      </p>
-
-      <div class="signature">твоя лп, завжди ♡</div>
-    </section>
-
-    <section class="names-section section-pad">
-      <p class="eyebrow">ONLY YOU</p>
-      <h2>мої імена для тебе</h2>
-
-      <div class="names-grid">
-        <div class="name-card">
-          <span>୨୧</span>
-          <p>найкраща</p>
-        </div>
-        <div class="name-card">
-          <span>♡</span>
-          <p>настуся</p>
-        </div>
-        <div class="name-card">
-          <span>୨୧</span>
-          <p>настінька</p>
-        </div>
-        <div class="name-card">
-          <span>♡</span>
-          <p>лп</p>
-        </div>
+      <div class="hero-side right-side">
+        <span class="side-heart">♡</span>
+        <span class="tiny-note">made with love</span>
       </div>
 
-      <p class="names-note">
-        одна настя, мільйон причин її любити 🖤
-      </p>
+      <img class="hero-flower"
+        src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=500&q=85"
+        alt="Нежные цветы">
+      <div class="hero-stamp">with<br>love ♡</div>
     </section>
 
-    <section class="gallery-section section-pad">
-      <p class="eyebrow">OUR LITTLE MEMORIES</p>
-      <h2>кадри, які хочеться<br>зберегти назавжди</h2>
+    <section class="intro reveal" id="surprise">
+      <div class="section-number">01 / A LITTLE NOTE</div>
+      <div class="intro-inner">
+        <span class="intro-symbol">♡</span>
+        <h2>hey, <i>bestie.</i></h2>
+        <p>
+          this little corner of the internet<br>
+          belongs to our memories.
+        </p>
+        <p class="intro-small">
+          take your time, look around<br>
+          and don't forget to smile.
+        </p>
+        <div class="mini-hearts">♡ &nbsp; ♡ &nbsp; ♡</div>
+      </div>
+    </section>
+
+    <section class="gallery-section reveal" id="memories">
+      <div class="section-number">02 / OUR LITTLE WORLD</div>
+      <div class="section-heading">
+        <p class="eyebrow">collected moments</p>
+        <h2>us, in little <i>frames.</i></h2>
+        <p>the moments I'd keep forever ♡</p>
+      </div>
 
       <div class="photo-gallery">
-        <figure class="photo-card photo-one">
-          <div class="photo-wrap">
-            <img src="MG_6759.jpeg" alt="Наш спільний спогад">
-          </div>
-          <figcaption>
-            <span>♡</span>
-            my favorite memory
-          </figcaption>
+        <figure class="photo-card photo-1">
+          <button class="photo-open" aria-label="Открыть фотографию">
+            <img src="IMG_5904.jpeg" alt="Our memory 1" loading="lazy">
+          </button>
+          <figcaption><span>♡</span> my favorite kind of day</figcaption>
+          <small>no. 01</small>
         </figure>
 
-        <figure class="photo-card photo-two">
-          <div class="photo-wrap">
-            <img src="IMG_6760.jpeg" alt="Ще один наш спогад">
-          </div>
-          <figcaption>
-            <span>୨୧</span>
-            you & me, always
-          </figcaption>
+        <figure class="photo-card photo-2">
+          <button class="photo-open" aria-label="Открыть фотографию">
+            <img src="IMG_5905.jpeg" alt="Our memory 2" loading="lazy">
+          </button>
+          <figcaption><span>♡</span> you make life sweeter</figcaption>
+          <small>no. 02</small>
+        </figure>
+
+        <figure class="photo-card photo-3">
+          <button class="photo-open" aria-label="Открыть фотографию">
+            <img src="IMG_5906.jpeg" alt="Our memory 3" loading="lazy">
+          </button>
+          <figcaption><span>♡</span> a memory to keep</figcaption>
+          <small>no. 03</small>
+        </figure>
+
+        <figure class="photo-card photo-4">
+          <button class="photo-open" aria-label="Открыть фотографию">
+            <img src="IMG_5907.jpeg" alt="Our memory 4" loading="lazy">
+          </button>
+          <figcaption><span>♡</span> my person, always</figcaption>
+          <small>no. 04</small>
+        </figure>
+
+        <figure class="photo-card photo-5">
+          <button class="photo-open" aria-label="Открыть фотографию">
+            <img src="IMG_5908.jpeg" alt="Our memory 5" loading="lazy">
+          </button>
+          <figcaption><span>♡</span> just us being us</figcaption>
+          <small>no. 05</small>
+        </figure>
+
+        <figure class="photo-card photo-6">
+          <button class="photo-open" aria-label="Открыть фотографию">
+            <img src="IMG_6759.jpeg" alt="Our memory 6" loading="lazy">
+          </button>
+          <figcaption><span>♡</span> little things, big feelings</figcaption>
+          <small>no. 06</small>
+        </figure>
+
+        <figure class="photo-card photo-7">
+          <button class="photo-open" aria-label="Открыть фотографию">
+            <img src="IMG_6760.jpeg" alt="Our memory 7" loading="lazy">
+          </button>
+          <figcaption><span>♡</span> forever in my camera roll</figcaption>
+          <small>no. 07</small>
+        </figure>
+
+        <figure class="photo-card photo-8">
+          <button class="photo-open" aria-label="Открыть фотографию">
+            <img src="IMG_6781.jpeg" alt="Our memory 8" loading="lazy">
+          </button>
+          <figcaption><span>♡</span> the sweetest chapter</figcaption>
+          <small>no. 08</small>
+        </figure>
+
+        <figure class="photo-card photo-9">
+          <button class="photo-open" aria-label="Открыть фотографию">
+            <img src="IMG_6782.jpeg" alt="Our memory 9" loading="lazy">
+          </button>
+          <figcaption><span>♡</span> you and me, always</figcaption>
+          <small>no. 09</small>
+        </figure>
+
+        <figure class="photo-card photo-10">
+          <button class="photo-open" aria-label="Открыть фотографию">
+            <img src="IMG_6783.jpeg" alt="Our memory 10" loading="lazy">
+          </button>
+          <figcaption><span>♡</span> my happy little place</figcaption>
+          <small>no. 10</small>
+        </figure>
+
+        <figure class="photo-card photo-11">
+          <button class="photo-open" aria-label="Открыть фотографию">
+            <img src="IMG_6784.jpeg" alt="Our memory 11" loading="lazy">
+          </button>
+          <figcaption><span>♡</span> memories over everything</figcaption>
+          <small>no. 11</small>
+        </figure>
+
+        <figure class="photo-card photo-12">
+          <button class="photo-open" aria-label="Открыть фотографию">
+            <img src="IMG_6785.jpeg" alt="Our memory 12" loading="lazy">
+          </button>
+          <figcaption><span>♡</span> a little piece of forever</figcaption>
+          <small>no. 12</small>
         </figure>
       </div>
 
-      <p class="gallery-note">
-        маленькі моменти, великі спогади 🤍
-      </p>
+      <p class="gallery-footnote">twelve moments, one very special friendship ♡</p>
     </section>
 
-    <section class="birthday-section">
-      <div class="birthday-card">
-        <span class="cake">🎂</span>
-        <p class="eyebrow">TODAY IS ALL ABOUT YOU</p>
-        <h2>happy birthday,<br><span>my Nastya</span></h2>
+    <section class="flowers-section reveal">
+      <div class="section-number">03 / FLOWERS FOR YOU</div>
+      <div class="flowers-layout">
+        <div class="flower-image-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=1000&q=85"
+            alt="Букет нежных цветов"
+            loading="lazy">
+          <span class="flower-label">picked just for you</span>
+        </div>
 
-        <div class="cake-decor">୨୧ 🦢 ୨୧</div>
-
-        <p class="birthday-message">
-          нехай цей рік подарує тобі стільки щастя,
-          скільки любові ти даруєш іншим.
-          ти заслуговуєш на все найкраще. 🪽
-        </p>
-
-        <audio id="birthdayMusic" preload="metadata" controls>
-          <source src="happy-birthday.mp3" type="audio/mpeg">
-          Твій браузер не підтримує аудіо.
-        </audio>
-
-        <p class="music-caption">
-          ♫ happy birthday to you ♫
-        </p>
-
-        <button class="outline-button" id="surpriseButton" type="button">
-          маленький сюрприз 🖤
-        </button>
-
-        <p class="surprise-message" id="surpriseMessage" hidden>
-          настюся, залишайся такою ж неймовірною.
-          я дуже тебе люблю! 🖤🤍🫶🏻
-        </p>
+        <div class="flower-copy">
+          <span class="handwritten">a little bouquet</span>
+          <h2>you deserve<br>all the <i>flowers.</i></h2>
+          <p>
+            for your kind heart, your pretty smile
+            and all the little things that make
+            you so wonderfully you.
+          </p>
+          <div class="flower-divider">♡ ─── ♡</div>
+          <p class="flower-small">sending you the softest kind of love.</p>
+        </div>
       </div>
     </section>
 
-    <section class="final-section">
-      <div class="final-bow">୨୧</div>
-      <p class="eyebrow">NO MATTER WHAT</p>
-      <h2>ти завжди<br>будеш моєю<br><span>найкращою</span></h2>
-      <div class="divider">━━━━ ♡ ━━━━</div>
-      <p class="final-emojis">🖤 🤍 🐈‍⬛ 🪽 🦢</p>
-      <p class="final-note">з любов’ю, для насті ♡</p>
+    <section class="letter-section reveal" id="letter">
+      <div class="section-number">04 / SOMETHING FROM MY HEART</div>
+      <div class="letter-wrap">
+        <div class="letter-decoration top-left">♡</div>
+        <div class="letter-decoration top-right">✳</div>
+        <div class="letter-paper">
+          <div class="letter-top">a letter for my favorite person</div>
+          <div class="letter-bow">🎀</div>
+          <h2>dear <i>bestie,</i></h2>
+          <div class="letter-content">
+            <p>
+              I hope you know how special you are.
+              You deserve days full of laughter,
+              people who truly care about you,
+              and little reasons to smile every day.
+            </p>
+            <p>
+              Thank you for being part of my story.
+              I hope we make so many more memories,
+              take a million more pictures
+              and keep finding reasons to laugh together.
+            </p>
+            <p>
+              no matter how much time passes,
+              I hope you always remember
+              that you are loved, appreciated
+              and one of a kind.
+            </p>
+            <p class="letter-signature">with all my love, ♡</p>
+          </div>
+          <div class="letter-bottom">sealed with love · always</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="birthday-section reveal">
+      <div class="section-number">05 / MAKE A WISH</div>
+      <div class="birthday-content">
+        <span class="birthday-sparkle">✳</span>
+        <p class="eyebrow">today is all about you</p>
+        <h2>happy birthday,<br><i>beautiful soul.</i></h2>
+        <div class="cake">🎂</div>
+        <p>
+          may your wishes find their way to you<br>
+          and may life give you a thousand reasons to smile.
+        </p>
+        <button class="wish-button" id="wishButton">make a little wish ♡</button>
+        <p class="wish-message" id="wishMessage" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="final-section reveal">
+      <div class="final-frame">
+        <div class="final-hearts">♡　♡　♡</div>
+        <p class="eyebrow">one last little thing</p>
+        <h2>you're my kind<br>of <i>magic.</i></h2>
+        <p class="final-note">keep this little page close to your heart.</p>
+        <div class="final-bow">🎀</div>
+        <div class="final-divider">✧ ── ♡ ── ✧</div>
+        <p class="promo-title">хочеш такий самий сайт?</p>
+        <a class="order-button" href="https://lillitochka.github.io/kvisit/">
+          замовити свій сайт <span>↗</span>
+        </a>
+        <p class="profile-note">замовляй за посиланням у шапці профілю 🤍</p>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <span>K & N</span>
-    <p>made with love ♡</p>
-    <span>୨୧</span>
+    made with love & a little bow ♡
   </footer>
 
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="closeLightbox" aria-label="Закрити">×</button>
+    <button class="lightbox-prev" id="prevPhoto" aria-label="Попереднє фото">‹</button>
+    <img id="lightboxImage" src="" alt="Збільшена фотографія">
+    <button class="lightbox-next" id="nextPhoto" aria-label="Наступне фото">›</button>
+    <p id="lightboxCounter"></p>
+  </div>
+
   <script>
-    const surpriseButton = document.getElementById('surpriseButton');
-    const surpriseMessage = document.getElementById('surpriseMessage');
+    const music = document.getElementById('birthdayMusic');
+    const musicButton = document.getElementById('musicButton');
+    const musicLabel = document.getElementById('musicLabel');
 
-    surpriseButton.addEventListener('click', () => {
-      surpriseMessage.hidden = !surpriseMessage.hidden;
-      surpriseButton.textContent = surpriseMessage.hidden
-        ? 'маленький сюрприз 🖤'
-        : 'ще одне обіймашкове ୨୧';
-
-      if (!surpriseMessage.hidden) {
-        surpriseMessage.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest'
-        });
+    musicButton.addEventListener('click', async () => {
+      if (music.paused) {
+        try {
+          await music.play();
+          musicLabel.textContent = 'now playing ♡';
+        } catch {
+          musicLabel.textContent = 'add happy-birthday.mp3';
+        }
+      } else {
+        music.pause();
+        musicLabel.textContent = 'our song';
       }
     });
+
+    document.getElementById('openButton').addEventListener('click', () => {
+      document.getElementById('surprise').scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(section => {
+      revealObserver.observe(section);
+    });
+
+    const galleryImages = [...document.querySelectorAll('.photo-card img')];
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxCounter = document.getElementById('lightboxCounter');
+    let currentPhoto = 0;
+
+    function showPhoto(index) {
+      currentPhoto = (index + galleryImages.length) % galleryImages.length;
+      lightboxImage.src = galleryImages[currentPhoto].src;
+      lightboxImage.alt = galleryImages[currentPhoto].alt;
+      lightboxCounter.textContent =
+        `${String(currentPhoto + 1).padStart(2, '0')} / ${galleryImages.length}`;
+    }
+
+    function openPhoto(index) {
+      showPhoto(index);
+      lightbox.classList.add('active');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('no-scroll');
+    }
+
+    function closePhoto() {
+      lightbox.classList.remove('active');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('no-scroll');
+    }
+
+    galleryImages.forEach((image, index) => {
+      image.closest('button').addEventListener('click', () => openPhoto(index));
+    });
+
+    document.getElementById('closeLightbox').addEventListener('click', closePhoto);
+    document.getElementById('prevPhoto').addEventListener('click', () => showPhoto(currentPhoto - 1));
+    document.getElementById('nextPhoto').addEventListener('click', () => showPhoto(currentPhoto + 1));
+
+    lightbox.addEventListener('click', event => {
+      if (event.target === lightbox) closePhoto();
+    });
+
+    document.addEventListener('keydown', event => {
+      if (!lightbox.classList.contains('active')) return;
+      if (event.key === 'Escape') closePhoto();
+      if (event.key === 'ArrowRight') showPhoto(currentPhoto + 1);
+      if (event.key === 'ArrowLeft') showPhoto(currentPhoto - 1);
+    });
+
+    document.getElementById('wishButton').addEventListener('click', () => {
+      document.getElementById('wishMessage').textContent =
+        'your wish is between you and the universe ♡';
+      document.getElementById('wishButton').textContent = 'wish made ♡';
+      document.getElementById('wishButton').disabled = true;
+
+      for (let i = 0; i < 18; i++) {
+        const heart = document.createElement('span');
+        heart.className = 'wish-heart';
+        heart.textContent = ['♡', '✧', '♥'][i % 3];
+        heart.style.left = `${10 + Math.random() * 80}%`;
+        heart.style.animationDelay = `${Math.random() * 0.8}s`;
+        document.querySelector('.birthday-content').appendChild(heart);
+        setTimeout(() => heart.remove(), 2800);
+      }
+    });
+
+    const heartContainer = document.getElementById('hearts');
+    for (let i = 0; i < 14; i++) {
+      const heart = document.createElement('span');
+      heart.textContent = i % 3 === 0 ? '✧' : '♡';
+      heart.style.left = `${Math.random() * 100}%`;
+      heart.style.animationDelay = `${Math.random() * 16}s`;
+      heart.style.animationDuration = `${12 + Math.random() * 12}s`;
+      heartContainer.appendChild(heart);
+    }
   </script>
 </body>
 </html>
-
