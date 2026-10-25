@@ -2,403 +2,668 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f8f6f4">
-  <title>for my favorite girl ♡</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f6f0">
+<title>Для моєї Настусі ♡</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Comfortaa:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --paper: #f8f6f0;
+  --white: #fffefa;
+  --ink: #242321;
+  --muted: #827c74;
+  --line: #d9d4cb;
+  --pink: #ead4d1;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Comfortaa', sans-serif;
+  overflow-x: hidden;
+}
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; }
+img { display: block; max-width: 100%; }
+::selection { background: #d8c6c0; color: #222; }
+
+.topline {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+.topline span:last-child { font-family: 'Caveat'; font-size: 19px; letter-spacing: 0; }
+
+.hero {
+  position: relative;
+  min-height: 780px;
+  padding: 64px 22px 48px;
+  text-align: center;
+  overflow: hidden;
+}
+.eyebrow {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.hero h1 {
+  position: relative;
+  z-index: 2;
+  margin: 24px 0 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: clamp(42px, 12vw, 76px);
+  line-height: .98;
+  letter-spacing: -2px;
+}
+.hero h1 em { font-weight: 500; }
+.hero-script {
+  position: relative;
+  z-index: 2;
+  margin: 14px 0 0;
+  font-family: 'Caveat', cursive;
+  font-size: 32px;
+}
+.hero-collage {
+  position: relative;
+  width: min(100%, 440px);
+  height: 350px;
+  margin: 22px auto 0;
+}
+.hero-photo {
+  position: absolute;
+  padding: 7px 7px 27px;
+  background: var(--white);
+  box-shadow: 0 8px 25px #30282018;
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-photo.one {
+  width: 49%;
+  height: 260px;
+  left: 4%;
+  top: 35px;
+  transform: rotate(-8deg);
+}
+.hero-photo.two {
+  width: 48%;
+  height: 220px;
+  right: 3%;
+  top: 80px;
+  transform: rotate(7deg);
+}
+.hero-photo.three {
+  width: 35%;
+  height: 145px;
+  left: 33%;
+  bottom: 0;
+  transform: rotate(-3deg);
+}
+.photo-label {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-size: 16px;
+}
+.bow {
+  position: absolute;
+  z-index: 3;
+  width: 62px;
+  height: 45px;
+}
+.bow:before, .bow:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  width: 29px;
+  height: 30px;
+  border: 2px solid #292725;
+  background: #f8f6f0;
+}
+.bow:before {
+  left: 1px;
+  border-radius: 80% 20% 65% 35%;
+  transform: rotate(18deg);
+}
+.bow:after {
+  right: 1px;
+  border-radius: 20% 80% 35% 65%;
+  transform: rotate(-18deg);
+}
+.bow i {
+  position: absolute;
+  z-index: 2;
+  left: 25px;
+  top: 15px;
+  width: 12px;
+  height: 12px;
+  background: #292725;
+  border-radius: 50%;
+}
+.bow b {
+  position: absolute;
+  z-index: 1;
+  top: 25px;
+  left: 24px;
+  width: 14px;
+  height: 27px;
+  border-left: 2px solid #292725;
+  border-right: 2px solid #292725;
+  transform: rotate(8deg);
+}
+.hero-bow { top: 30px; right: 3%; transform: rotate(15deg); }
+.hero-bottom {
+  margin: 22px auto 0;
+  max-width: 290px;
+  font-family: 'Caveat', cursive;
+  font-size: 22px;
+  line-height: 1.3;
+}
+.scroll-link {
+  display: inline-block;
+  margin-top: 23px;
+  color: var(--ink);
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 6px;
+}
+
+.section {
+  padding: 75px 22px;
+  border-top: 1px solid var(--line);
+}
+.section-head { text-align: center; margin-bottom: 40px; }
+.number {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: clamp(34px, 8vw, 54px);
+  line-height: 1.08;
+  margin: 15px 0;
+  letter-spacing: -1px;
+}
+.section h2 em { font-weight: 500; }
+.hand {
+  font-family: 'Caveat', cursive;
+  font-size: 24px;
+}
+.intro {
+  max-width: 340px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  line-height: 2;
+  color: #625d56;
+}
+
+.collage {
+  max-width: 520px;
+  margin: 20px auto 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 48px;
+  gap: 11px;
+}
+.polaroid {
+  position: relative;
+  background: #fffefa;
+  padding: 6px 6px 27px;
+  box-shadow: 0 5px 18px #27231d12;
+  min-width: 0;
+}
+.polaroid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #e6e0d7;
+}
+.polaroid .caption {
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: 4px;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.p1 { grid-column: 1 / 4; grid-row: span 5; transform: rotate(-4deg); }
+.p2 { grid-column: 4 / 7; grid-row: span 4; transform: rotate(4deg); margin-top: 20px; }
+.p3 { grid-column: 2 / 5; grid-row: span 5; transform: rotate(3deg); }
+.p4 { grid-column: 5 / 7; grid-row: span 4; transform: rotate(-5deg); margin-top: 18px; }
+.p5 { grid-column: 1 / 4; grid-row: span 4; transform: rotate(4deg); }
+.p6 { grid-column: 4 / 7; grid-row: span 5; transform: rotate(-3deg); }
+.p7 { grid-column: 1 / 4; grid-row: span 5; transform: rotate(-3deg); }
+.p8 { grid-column: 4 / 7; grid-row: span 4; transform: rotate(5deg); margin-top: 15px; }
+.p9 { grid-column: 2 / 5; grid-row: span 5; transform: rotate(3deg); }
+.p10 { grid-column: 5 / 7; grid-row: span 4; transform: rotate(-4deg); }
+.p11 { grid-column: 1 / 4; grid-row: span 4; transform: rotate(3deg); }
+.p12 { grid-column: 4 / 7; grid-row: span 5; transform: rotate(-4deg); }
+.collage .polaroid { min-height: 0; }
+.gallery-note {
+  text-align: center;
+  margin: 32px auto 0;
+  font-family: 'Caveat', cursive;
+  font-size: 24px;
+}
+
+.divider-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 12px;
+}
+.divider-art:before, .divider-art:after {
+  content: "";
+  width: 48px;
+  height: 1px;
+  background: var(--line);
+}
+.letter-section {
+  background: #eeebe4;
+  padding-top: 85px;
+  padding-bottom: 85px;
+}
+.letter {
+  position: relative;
+  max-width: 420px;
+  margin: 30px auto 0;
+  background: #fffdf7;
+  border: 1px solid #ded8cc;
+  padding: 34px 24px;
+  box-shadow: 0 15px 40px #332a2010;
+}
+.letter:before {
+  content: "♡";
+  display: block;
+  text-align: center;
+  font-size: 27px;
+  margin-bottom: 20px;
+}
+.letter-title {
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-size: 34px;
+  margin: 0 0 20px;
+}
+.letter p {
+  font-size: 12px;
+  line-height: 2.1;
+  color: #514c45;
+}
+.letter-sign {
+  text-align: right;
+  font-family: 'Caveat', cursive;
+  font-size: 25px;
+}
+.read-button, .music-button {
+  display: block;
+  border: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  padding: 15px 18px;
+  margin: 24px auto 0;
+  font-size: 9px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background .3s, color .3s;
+}
+.read-button:hover, .music-button:hover {
+  background: var(--ink);
+  color: white;
+}
+.hidden-letter { display: none; }
+.hidden-letter.show { display: block; animation: fadeUp .8s both; }
+
+.birthday {
+  position: relative;
+  text-align: center;
+  padding: 90px 22px 80px;
+  overflow: hidden;
+}
+.birthday h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: clamp(40px, 10vw, 68px);
+  line-height: 1;
+  margin: 24px 0;
+}
+.birthday h2 em { font-weight: 500; }
+.birthday-date {
+  font-family: 'Caveat', cursive;
+  font-size: 26px;
+}
+.cake-art {
+  position: relative;
+  width: 190px;
+  height: 150px;
+  margin: 35px auto;
+}
+.cake-top {
+  position: absolute;
+  width: 155px;
+  height: 50px;
+  left: 17px;
+  top: 45px;
+  border-radius: 50%;
+  border: 1px solid #393631;
+  background: #fffdf7;
+  z-index: 2;
+}
+.cake-body {
+  position: absolute;
+  left: 17px;
+  top: 66px;
+  width: 155px;
+  height: 52px;
+  background: repeating-linear-gradient(90deg,#f4f0e7 0 13px,#ded8cc 13px 15px);
+  border: 1px solid #393631;
+  border-radius: 0 0 50% 50% / 0 0 20% 20%;
+}
+.cake-top:after {
+  content: "♡  ♡  ♡";
+  position: absolute;
+  top: 13px;
+  left: 0;
+  right: 0;
+  font-size: 14px;
+}
+.candle {
+  position: absolute;
+  z-index: 3;
+  top: 12px;
+  left: 91px;
+  width: 8px;
+  height: 36px;
+  background: repeating-linear-gradient(0deg,#292725 0 4px,#f8f6f0 4px 8px);
+  border: 1px solid #292725;
+}
+.flame {
+  position: absolute;
+  z-index: 4;
+  left: 90px;
+  top: 0;
+  width: 10px;
+  height: 14px;
+  border-radius: 80% 20% 60% 40%;
+  transform: rotate(45deg);
+  background: #292725;
+  animation: flicker .8s ease-in-out infinite alternate;
+}
+.end-note {
+  max-width: 300px;
+  margin: 25px auto;
+  font-size: 11px;
+  line-height: 2;
+}
+footer {
+  border-top: 1px solid var(--line);
+  padding: 24px 15px;
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+footer .hand { font-size: 19px; letter-spacing: 0; margin-top: 8px; }
+
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s, transform .8s; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes flicker {
+  from { transform: rotate(40deg) scale(.92); }
+  to { transform: rotate(50deg) scale(1.08); }
+}
+@media (min-width: 700px) {
+  .hero { min-height: 900px; padding-top: 80px; }
+  .hero-collage { height: 430px; }
+  .hero-photo.one { height: 320px; }
+  .hero-photo.two { height: 270px; }
+  .hero-photo.three { height: 175px; }
+  .section { padding-left: 40px; padding-right: 40px; }
+  .collage { grid-auto-rows: 62px; gap: 18px; }
+  .polaroid { padding: 9px 9px 34px; }
+  .polaroid .caption { font-size: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *:before, *:after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
 </head>
+
 <body>
-  <div class="grain"></div>
-  <div class="floating-hearts" id="hearts"></div>
+<header class="topline">
+  <span>K V I S I T E</span>
+  <span>made with love ♡</span>
+  <span>FOR NASTIA</span>
+</header>
 
-  <header class="topbar">
-    <a class="brand" href="#home">little <span>♡</span> things</a>
-    <button class="music-button" id="musicButton" aria-label="Увімкнути музику">
-      ♫ <span id="musicLabel">our song</span>
-    </button>
-  </header>
+<main>
+  <section class="hero">
+    <p class="eyebrow">A LITTLE PAGE JUST FOR YOU</p>
+    <h1>для моєї<br><em>найкращої</em><br>Настусі</h1>
+    <p class="hero-script">my favorite person in the whole world ♡</p>
 
-  <audio id="birthdayMusic" loop preload="none">
-    <source src="happy-birthday.mp3" type="audio/mpeg">
-  </audio>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-side left-side">
-        <span class="tiny-note">a little page</span>
-        <span class="side-heart">♡</span>
+    <div class="hero-collage">
+      <div class="hero-photo one">
+        <img src="IMG_5904.jpeg" alt="Наш спогад" fetchpriority="high">
+        <span class="photo-label">my favorite girl</span>
       </div>
-
-      <div class="hero-content">
-        <div class="hero-bow">🎀</div>
-        <p class="eyebrow">a little something for you</p>
-        <h1>For my<br><i>favorite girl</i></h1>
-        <p class="hero-description">
-          some people make ordinary days<br>
-          feel like something special ♡
-        </p>
-        <button class="primary-button" id="openButton">
-          open your little surprise <span>↗</span>
-        </button>
-        <div class="scroll-cue"><span></span> scroll slowly</div>
+      <div class="hero-photo two">
+        <img src="IMG_6759.jpeg" alt="Ми разом">
+        <span class="photo-label">us, always ♡</span>
       </div>
-
-      <div class="hero-side right-side">
-        <span class="side-heart">♡</span>
-        <span class="tiny-note">made with love</span>
+      <div class="hero-photo three">
+        <img src="IMG_6760.jpeg" alt="Щасливий момент">
+        <span class="photo-label">forever memories</span>
       </div>
+      <div class="bow hero-bow"><i></i><b></b></div>
+    </div>
 
-      <img class="hero-flower"
-        src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=500&q=85"
-        alt="Нежные цветы">
-      <div class="hero-stamp">with<br>love ♡</div>
-    </section>
+    <p class="hero-bottom">настуся · настінька · найкраща · лп</p>
+    <a class="scroll-link" href="#our-world">DISCOVER OUR LITTLE WORLD ↓</a>
+  </section>
 
-    <section class="intro reveal" id="surprise">
-      <div class="section-number">01 / A LITTLE NOTE</div>
-      <div class="intro-inner">
-        <span class="intro-symbol">♡</span>
-        <h2>hey, <i>bestie.</i></h2>
+  <section class="section" id="our-world">
+    <div class="section-head reveal">
+      <p class="number">01 — OUR LITTLE WORLD</p>
+      <h2>трохи <em>нас.</em><br>і дуже багато любові</h2>
+      <p class="intro">Є люди, з якими навіть звичайні моменти стають особливими. Ти — саме така людина для мене.</p>
+    </div>
+
+    <div class="collage reveal">
+      <figure class="polaroid p1">
+        <img src="IMG_5905.jpeg" alt="Спогад 1" loading="lazy">
+        <figcaption class="caption">a day to remember ♡</figcaption>
+      </figure>
+      <figure class="polaroid p2">
+        <img src="IMG_5906.jpeg" alt="Спогад 2" loading="lazy">
+        <figcaption class="caption">my person</figcaption>
+      </figure>
+      <figure class="polaroid p3">
+        <img src="IMG_5907.jpeg" alt="Спогад 3" loading="lazy">
+        <figcaption class="caption">little moments</figcaption>
+      </figure>
+      <figure class="polaroid p4">
+        <img src="IMG_5908.jpeg" alt="Спогад 4" loading="lazy">
+        <figcaption class="caption">just us ♡</figcaption>
+      </figure>
+      <figure class="polaroid p5">
+        <img src="IMG_6781.jpeg" alt="Спогад 5" loading="lazy">
+        <figcaption class="caption">my bestie</figcaption>
+      </figure>
+      <figure class="polaroid p6">
+        <img src="IMG_6782.jpeg" alt="Спогад 6" loading="lazy">
+        <figcaption class="caption">forever & ever</figcaption>
+      </figure>
+      <figure class="polaroid p7">
+        <img src="IMG_6783.jpeg" alt="Спогад 7" loading="lazy">
+        <figcaption class="caption">you + me</figcaption>
+      </figure>
+      <figure class="polaroid p8">
+        <img src="IMG_6784.jpeg" alt="Спогад 8" loading="lazy">
+        <figcaption class="caption">my happy place</figcaption>
+      </figure>
+      <figure class="polaroid p9">
+        <img src="IMG_6785.jpeg" alt="Спогад 9" loading="lazy">
+        <figcaption class="caption">the best memories</figcaption>
+      </figure>
+      <figure class="polaroid p10">
+        <img src="IMG_6759.jpeg" alt="Спогад 10" loading="lazy">
+        <figcaption class="caption">love this ♡</figcaption>
+      </figure>
+      <figure class="polaroid p11">
+        <img src="IMG_6760.jpeg" alt="Спогад 11" loading="lazy">
+        <figcaption class="caption">our little story</figcaption>
+      </figure>
+      <figure class="polaroid p12">
+        <img src="IMG_5904.jpeg" alt="Спогад 12" loading="lazy">
+        <figcaption class="caption">always my bestie</figcaption>
+      </figure>
+    </div>
+    <p class="gallery-note reveal">і це лише маленька частина нашої історії ♡</p>
+  </section>
+
+  <div class="divider-art"><span>♡ &nbsp; ♡ &nbsp; ♡</span></div>
+
+  <section class="section letter-section">
+    <div class="section-head reveal">
+      <p class="number">02 — A LETTER FOR YOU</p>
+      <h2>відкрий,<br><em>це для тебе</em></h2>
+      <p class="hand">тут усе, що не завжди скажеш уголос ♡</p>
+    </div>
+
+    <div class="letter reveal">
+      <h3 class="letter-title">моя настуся...</h3>
+      <p>
+        Я навіть не знаю, як умістити в один лист усе, що хочу тобі сказати. Але я точно знаю, що дуже сильно тебе люблю і неймовірно ціную нашу дружбу.
+      </p>
+      <p>
+        Ти для мене не просто подруга. Ти моя найкраща, моя настінька, моя лп — людина, з якою хочеться ділитися новинами, сміятися до сліз, говорити про все на світі й створювати ще мільйон спогадів.
+      </p>
+      <div class="hidden-letter" id="extraLetter">
         <p>
-          this little corner of the internet<br>
-          belongs to our memories.
+          Я хочу, щоб ти завжди пам'ятала, яка ти особлива. Щоб поруч були люди, які тебе розуміють, підтримують і люблять такою, яка ти є. Щоб у тебе здійснювалися навіть ті мрії, про які ти поки нікому не розповідала.
         </p>
-        <p class="intro-small">
-          take your time, look around<br>
-          and don't forget to smile.
-        </p>
-        <div class="mini-hearts">♡ &nbsp; ♡ &nbsp; ♡</div>
-      </div>
-    </section>
-
-    <section class="gallery-section reveal" id="memories">
-      <div class="section-number">02 / OUR LITTLE WORLD</div>
-      <div class="section-heading">
-        <p class="eyebrow">collected moments</p>
-        <h2>us, in little <i>frames.</i></h2>
-        <p>the moments I'd keep forever ♡</p>
-      </div>
-
-      <div class="photo-gallery">
-        <figure class="photo-card photo-1">
-          <button class="photo-open" aria-label="Открыть фотографию">
-            <img src="IMG_5904.jpeg" alt="Our memory 1" loading="lazy">
-          </button>
-          <figcaption><span>♡</span> my favorite kind of day</figcaption>
-          <small>no. 01</small>
-        </figure>
-
-        <figure class="photo-card photo-2">
-          <button class="photo-open" aria-label="Открыть фотографию">
-            <img src="IMG_5905.jpeg" alt="Our memory 2" loading="lazy">
-          </button>
-          <figcaption><span>♡</span> you make life sweeter</figcaption>
-          <small>no. 02</small>
-        </figure>
-
-        <figure class="photo-card photo-3">
-          <button class="photo-open" aria-label="Открыть фотографию">
-            <img src="IMG_5906.jpeg" alt="Our memory 3" loading="lazy">
-          </button>
-          <figcaption><span>♡</span> a memory to keep</figcaption>
-          <small>no. 03</small>
-        </figure>
-
-        <figure class="photo-card photo-4">
-          <button class="photo-open" aria-label="Открыть фотографию">
-            <img src="IMG_5907.jpeg" alt="Our memory 4" loading="lazy">
-          </button>
-          <figcaption><span>♡</span> my person, always</figcaption>
-          <small>no. 04</small>
-        </figure>
-
-        <figure class="photo-card photo-5">
-          <button class="photo-open" aria-label="Открыть фотографию">
-            <img src="IMG_5908.jpeg" alt="Our memory 5" loading="lazy">
-          </button>
-          <figcaption><span>♡</span> just us being us</figcaption>
-          <small>no. 05</small>
-        </figure>
-
-        <figure class="photo-card photo-6">
-          <button class="photo-open" aria-label="Открыть фотографию">
-            <img src="IMG_6759.jpeg" alt="Our memory 6" loading="lazy">
-          </button>
-          <figcaption><span>♡</span> little things, big feelings</figcaption>
-          <small>no. 06</small>
-        </figure>
-
-        <figure class="photo-card photo-7">
-          <button class="photo-open" aria-label="Открыть фотографию">
-            <img src="IMG_6760.jpeg" alt="Our memory 7" loading="lazy">
-          </button>
-          <figcaption><span>♡</span> forever in my camera roll</figcaption>
-          <small>no. 07</small>
-        </figure>
-
-        <figure class="photo-card photo-8">
-          <button class="photo-open" aria-label="Открыть фотографию">
-            <img src="IMG_6781.jpeg" alt="Our memory 8" loading="lazy">
-          </button>
-          <figcaption><span>♡</span> the sweetest chapter</figcaption>
-          <small>no. 08</small>
-        </figure>
-
-        <figure class="photo-card photo-9">
-          <button class="photo-open" aria-label="Открыть фотографию">
-            <img src="IMG_6782.jpeg" alt="Our memory 9" loading="lazy">
-          </button>
-          <figcaption><span>♡</span> you and me, always</figcaption>
-          <small>no. 09</small>
-        </figure>
-
-        <figure class="photo-card photo-10">
-          <button class="photo-open" aria-label="Открыть фотографию">
-            <img src="IMG_6783.jpeg" alt="Our memory 10" loading="lazy">
-          </button>
-          <figcaption><span>♡</span> my happy little place</figcaption>
-          <small>no. 10</small>
-        </figure>
-
-        <figure class="photo-card photo-11">
-          <button class="photo-open" aria-label="Открыть фотографию">
-            <img src="IMG_6784.jpeg" alt="Our memory 11" loading="lazy">
-          </button>
-          <figcaption><span>♡</span> memories over everything</figcaption>
-          <small>no. 11</small>
-        </figure>
-
-        <figure class="photo-card photo-12">
-          <button class="photo-open" aria-label="Открыть фотографию">
-            <img src="IMG_6785.jpeg" alt="Our memory 12" loading="lazy">
-          </button>
-          <figcaption><span>♡</span> a little piece of forever</figcaption>
-          <small>no. 12</small>
-        </figure>
-      </div>
-
-      <p class="gallery-footnote">twelve moments, one very special friendship ♡</p>
-    </section>
-
-    <section class="flowers-section reveal">
-      <div class="section-number">03 / FLOWERS FOR YOU</div>
-      <div class="flowers-layout">
-        <div class="flower-image-wrap">
-          <img
-            src="https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=1000&q=85"
-            alt="Букет нежных цветов"
-            loading="lazy">
-          <span class="flower-label">picked just for you</span>
-        </div>
-
-        <div class="flower-copy">
-          <span class="handwritten">a little bouquet</span>
-          <h2>you deserve<br>all the <i>flowers.</i></h2>
-          <p>
-            for your kind heart, your pretty smile
-            and all the little things that make
-            you so wonderfully you.
-          </p>
-          <div class="flower-divider">♡ ─── ♡</div>
-          <p class="flower-small">sending you the softest kind of love.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="letter-section reveal" id="letter">
-      <div class="section-number">04 / SOMETHING FROM MY HEART</div>
-      <div class="letter-wrap">
-        <div class="letter-decoration top-left">♡</div>
-        <div class="letter-decoration top-right">✳</div>
-        <div class="letter-paper">
-          <div class="letter-top">a letter for my favorite person</div>
-          <div class="letter-bow">🎀</div>
-          <h2>dear <i>bestie,</i></h2>
-          <div class="letter-content">
-            <p>
-              I hope you know how special you are.
-              You deserve days full of laughter,
-              people who truly care about you,
-              and little reasons to smile every day.
-            </p>
-            <p>
-              Thank you for being part of my story.
-              I hope we make so many more memories,
-              take a million more pictures
-              and keep finding reasons to laugh together.
-            </p>
-            <p>
-              no matter how much time passes,
-              I hope you always remember
-              that you are loved, appreciated
-              and one of a kind.
-            </p>
-            <p class="letter-signature">with all my love, ♡</p>
-          </div>
-          <div class="letter-bottom">sealed with love · always</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="birthday-section reveal">
-      <div class="section-number">05 / MAKE A WISH</div>
-      <div class="birthday-content">
-        <span class="birthday-sparkle">✳</span>
-        <p class="eyebrow">today is all about you</p>
-        <h2>happy birthday,<br><i>beautiful soul.</i></h2>
-        <div class="cake">🎂</div>
         <p>
-          may your wishes find their way to you<br>
-          and may life give you a thousand reasons to smile.
+          Дякую тобі за кожну розмову, кожен смішний момент і за те, що ти є в моєму житті. Я дуже хочу, щоб ми й через багато років згадували все це разом і сміялися так само, як зараз.
         </p>
-        <button class="wish-button" id="wishButton">make a little wish ♡</button>
-        <p class="wish-message" id="wishMessage" aria-live="polite"></p>
+        <p>Люблю тебе більше, ніж можна пояснити словами. Залишайся моєю найкращою. Завжди. ♡</p>
+        <p class="letter-sign">твоя лп, з любов'ю ♡</p>
       </div>
-    </section>
+      <button class="read-button" id="readLetter" type="button">ВІДКРИТИ ЛИСТ ♡</button>
+    </div>
+  </section>
 
-    <section class="final-section reveal">
-      <div class="final-frame">
-        <div class="final-hearts">♡　♡　♡</div>
-        <p class="eyebrow">one last little thing</p>
-        <h2>you're my kind<br>of <i>magic.</i></h2>
-        <p class="final-note">keep this little page close to your heart.</p>
-        <div class="final-bow">🎀</div>
-        <div class="final-divider">✧ ── ♡ ── ✧</div>
-        <p class="promo-title">хочеш такий самий сайт?</p>
-        <a class="order-button" href="https://lillitochka.github.io/kvisit/">
-          замовити свій сайт <span>↗</span>
-        </a>
-        <p class="profile-note">замовляй за посиланням у шапці профілю 🤍</p>
-      </div>
-    </section>
-  </main>
+  <section class="birthday">
+    <p class="number reveal">03 — YOUR SPECIAL DAY</p>
+    <h2 class="reveal">happy<br><em>birthday,</em><br>настусю ♡</h2>
+    <p class="birthday-date reveal">a little more magic, a little more love</p>
 
-  <footer class="footer">
-    made with love & a little bow ♡
-  </footer>
+    <div class="cake-art reveal" aria-label="Маленький святковий тортик">
+      <div class="flame"></div>
+      <div class="candle"></div>
+      <div class="cake-top"></div>
+      <div class="cake-body"></div>
+    </div>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" id="closeLightbox" aria-label="Закрити">×</button>
-    <button class="lightbox-prev" id="prevPhoto" aria-label="Попереднє фото">‹</button>
-    <img id="lightboxImage" src="" alt="Збільшена фотографія">
-    <button class="lightbox-next" id="nextPhoto" aria-label="Наступне фото">›</button>
-    <p id="lightboxCounter"></p>
-  </div>
+    <p class="end-note reveal">
+      Нехай цей рік принесе тобі стільки щастя, скільки тепла ти даруєш людям навколо. Ти заслуговуєш на найкраще, моя найкраща. 🤍
+    </p>
 
-  <script>
-    const music = document.getElementById('birthdayMusic');
-    const musicButton = document.getElementById('musicButton');
-    const musicLabel = document.getElementById('musicLabel');
+    <button class="music-button reveal" id="musicButton" type="button">♫ УВІМКНУТИ HAPPY BIRTHDAY</button>
+    <audio id="birthdayMusic" src="happy-birthday.mp3" loop preload="none"></audio>
+    <p class="hand reveal">з днем народження, моя любов 🖤</p>
+  </section>
+</main>
 
-    musicButton.addEventListener('click', async () => {
-      if (music.paused) {
-        try {
-          await music.play();
-          musicLabel.textContent = 'now playing ♡';
-        } catch {
-          musicLabel.textContent = 'add happy-birthday.mp3';
-        }
-      } else {
-        music.pause();
-        musicLabel.textContent = 'our song';
-      }
-    });
+<footer>
+  <div>K V I S I T E · MADE WITH LOVE</div>
+  <div class="hand">для найкращої Настусі ♡</div>
+</footer>
 
-    document.getElementById('openButton').addEventListener('click', () => {
-      document.getElementById('surprise').scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-
-    const revealObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll('.reveal').forEach(section => {
-      revealObserver.observe(section);
-    });
-
-    const galleryImages = [...document.querySelectorAll('.photo-card img')];
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightboxImage');
-    const lightboxCounter = document.getElementById('lightboxCounter');
-    let currentPhoto = 0;
-
-    function showPhoto(index) {
-      currentPhoto = (index + galleryImages.length) % galleryImages.length;
-      lightboxImage.src = galleryImages[currentPhoto].src;
-      lightboxImage.alt = galleryImages[currentPhoto].alt;
-      lightboxCounter.textContent =
-        `${String(currentPhoto + 1).padStart(2, '0')} / ${galleryImages.length}`;
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
     }
+  });
+}, { threshold: 0.12 });
 
-    function openPhoto(index) {
-      showPhoto(index);
-      lightbox.classList.add('active');
-      lightbox.setAttribute('aria-hidden', 'false');
-      document.body.classList.add('no-scroll');
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+const readButton = document.getElementById('readLetter');
+const extraLetter = document.getElementById('extraLetter');
+
+readButton.addEventListener('click', () => {
+  const isOpen = extraLetter.classList.toggle('show');
+  readButton.textContent = isOpen ? 'ЗАКРИТИ ЛИСТ ♡' : 'ВІДКРИТИ ЛИСТ ♡';
+  if (isOpen) {
+    setTimeout(() => extraLetter.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest'
+    }), 100);
+  }
+});
+
+const music = document.getElementById('birthdayMusic');
+const musicButton = document.getElementById('musicButton');
+
+musicButton.addEventListener('click', async () => {
+  if (music.paused) {
+    try {
+      await music.play();
+      musicButton.textContent = '♫ ВИМКНУТИ МУЗИКУ';
+    } catch (error) {
+      musicButton.textContent = 'ДОДАЙ ФАЙЛ happy-birthday.mp3';
     }
+  } else {
+    music.pause();
+    musicButton.textContent = '♫ УВІМКНУТИ HAPPY BIRTHDAY';
+  }
+});
 
-    function closePhoto() {
-      lightbox.classList.remove('active');
-      lightbox.setAttribute('aria-hidden', 'true');
-      document.body.classList.remove('no-scroll');
-    }
-
-    galleryImages.forEach((image, index) => {
-      image.closest('button').addEventListener('click', () => openPhoto(index));
-    });
-
-    document.getElementById('closeLightbox').addEventListener('click', closePhoto);
-    document.getElementById('prevPhoto').addEventListener('click', () => showPhoto(currentPhoto - 1));
-    document.getElementById('nextPhoto').addEventListener('click', () => showPhoto(currentPhoto + 1));
-
-    lightbox.addEventListener('click', event => {
-      if (event.target === lightbox) closePhoto();
-    });
-
-    document.addEventListener('keydown', event => {
-      if (!lightbox.classList.contains('active')) return;
-      if (event.key === 'Escape') closePhoto();
-      if (event.key === 'ArrowRight') showPhoto(currentPhoto + 1);
-      if (event.key === 'ArrowLeft') showPhoto(currentPhoto - 1);
-    });
-
-    document.getElementById('wishButton').addEventListener('click', () => {
-      document.getElementById('wishMessage').textContent =
-        'your wish is between you and the universe ♡';
-      document.getElementById('wishButton').textContent = 'wish made ♡';
-      document.getElementById('wishButton').disabled = true;
-
-      for (let i = 0; i < 18; i++) {
-        const heart = document.createElement('span');
-        heart.className = 'wish-heart';
-        heart.textContent = ['♡', '✧', '♥'][i % 3];
-        heart.style.left = `${10 + Math.random() * 80}%`;
-        heart.style.animationDelay = `${Math.random() * 0.8}s`;
-        document.querySelector('.birthday-content').appendChild(heart);
-        setTimeout(() => heart.remove(), 2800);
-      }
-    });
-
-    const heartContainer = document.getElementById('hearts');
-    for (let i = 0; i < 14; i++) {
-      const heart = document.createElement('span');
-      heart.textContent = i % 3 === 0 ? '✧' : '♡';
-      heart.style.left = `${Math.random() * 100}%`;
-      heart.style.animationDelay = `${Math.random() * 16}s`;
-      heart.style.animationDuration = `${12 + Math.random() * 12}s`;
-      heartContainer.appendChild(heart);
-    }
-  </script>
+document.querySelectorAll('.polaroid img, .hero-photo img').forEach(img => {
+  img.addEventListener('error', () => {
+    img.style.opacity = '0.15';
+    img.alt = 'Перевір назву файлу фотографії';
+  });
+});
+</script>
 </body>
 </html>
